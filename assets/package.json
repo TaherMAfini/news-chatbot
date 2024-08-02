@@ -1,0 +1,12 @@
+{
+  "name": "ninja-news",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "10.4.18",
+    "esbuild": "0.20.1",
+    "esbuild-copy-static-files": "0.1.0",
+    "postcss": "8.4.35",
+    "postcss-import": "16.0.1",
+    "tailwindcss": "3.4.1"
+  }
+}

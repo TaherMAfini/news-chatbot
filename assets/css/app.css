@@ -1,0 +1,45 @@
+/*
+ * Your custom CSS goes here but before adding a lot of CSS check this out:
+ *   https://tailwindcss.com/docs/extracting-components
+*/
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+#chat-input {
+    border-radius: 5px;
+    width: 75%;
+    min-height: 5rem;
+    font-size: 1rem;
+}
+
+.user-message {
+    background-color: #dadee4;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 65%;
+    margin-right: auto;
+    white-space: pre-line;
+}
+
+.user-message::selection {
+    background-color: #1d4ed8;
+    color: white;
+}
+
+.bot-response {
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 65%;
+    color: white;
+    margin-left: auto;
+    white-space: pre-line;
+}
+
+.bot-response::selection {
+    background-color: #dadee4;
+    color: black;
+}

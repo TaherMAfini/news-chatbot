@@ -1,0 +1,18 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Docker + Django{% endblock %}
+
+{% block body %}
+    <div class="m-2 text-center" style="width: 50vw;">
+        <div class="m-3 text-center">
+            <h1 class="text-4xl font-extrabold leading-none m-2 mt-10">Chat</h1>
+        </div>
+        <div id="chat-content" class="mb-auto p-2" style="height: 60vh; overflow: scroll;">
+        </div>
+        <div class="m-4 text-center h-auto">
+            <textarea class="block p-2.5 w-full text-sm text-black-900 bg-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" id="chat-input" placeholder="Type to Chat"></textarea>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" id="chat-send">Send</button>
+        </div>
+    </div>
+{% endblock %}

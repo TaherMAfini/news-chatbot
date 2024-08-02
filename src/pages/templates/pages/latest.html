@@ -1,0 +1,14 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Docker + Django{% endblock %}
+
+{% block body %}
+    <div class="m-4">
+        <div class="m-4 text-center">
+            <h1 class="text-4xl font-extrabold leading-none m-4 mt-10">Latest News</h1>
+        </div>
+        <table class="table-auto w-full mt-10 border-solid border-2" id="latest-table">
+        </table>
+    </div>
+{% endblock %}

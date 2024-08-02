@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protoblog;
+
+message Video {
+    string title = 1;
+    string url = 2;
+    string transcript = 3;
+    string channel = 4;
+    string publication_date = 5;
+    string category = 6;
+}

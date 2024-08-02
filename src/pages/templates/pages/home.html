@@ -1,0 +1,26 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Docker + Django{% endblock %}
+
+{% block body %}
+
+
+  <div class="m-4">
+    <div class="m-4 text-center">
+        <h1 class="text-6xl font-extrabold leading-none m-4 mt-10">Ninja News Time Machine</h1>
+    </div>
+    <div class="m-4 text-left">
+      <p class="text-2xl leading-none">This service collects news from YouTube videos and provides their transcripts and an option to summarize the transcript using the <strong>GPT-3.5-Turbo</strong> LLM model. This service also provides a chat interface powered by the same model where users can ask questions about the news.</p>
+    </div>
+    <div class="m-4 text-left">
+      <p class="text-2xl leading-none">Features: </p>
+      <ul class="list-disc">
+        <li class="text-2xl leading-none">Collects news from YouTube videos</li>
+        <li class="text-2xl leading-none">Provides transcripts of the news <a href="{% url 'latest' %}"><svg class="h-6 w-6 text-blue-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; margin-left: 5px;">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />  <line x1="10" y1="14" x2="20" y2="4" />  <polyline points="15 4 20 4 20 9" /></svg></a></li>
+        <li class="text-2xl leading-none">Summarizes the transcript using the GPT-3.5-Turbo LLM model <a href="{% url 'latest' %}"><svg class="h-6 w-6 text-blue-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; margin-left: 5px;">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />  <line x1="10" y1="14" x2="20" y2="4" />  <polyline points="15 4 20 4 20 9" /></svg></a></li>
+        <li class="text-2xl leading-none">Provides a chat interface powered by GPT-3.5-Turbo<a href="{% url 'chat' %}"><svg class="h-6 w-6 text-blue-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; margin-left: 5px;">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />  <line x1="10" y1="14" x2="20" y2="4" />  <polyline points="15 4 20 4 20 9" /></svg></a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

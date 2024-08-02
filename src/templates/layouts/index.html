@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A production ready example Django app that's using Docker and Docker Compose.">
+
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <script defer src="{% static 'js/app.js' %}"></script>
+
+    {# Generated with: https://realfavicongenerator.net/ #}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'safari-pinned-tab.svg' %}" color="#61b9d2">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css">
+
+  </head>
+
+  <body class="flex flex-col h-screen justify-between">
+    <div style="background-color: #4b5563;">
+      <div class="max-w-screen-lg mx-auto py-3 px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="flex-1 flex items-center flow-root" id="navbar-default">
+            <a href="/"><h1 class="text-white font-bold text-4xl float-left">NinjaNews</h1></a>
+            <ul class="flex float-right m-auto">
+              <li class="mr-6">
+                <a class="text-blue-500 hover:text-blue-300 text-lg" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="mr-6">
+                <a class="text-blue-500 hover:text-blue-300 text-lg" href="{% url 'latest' %}">Latest</a>
+              </li>
+              <li class="mr-6">
+                <a class="text-blue-500 hover:text-blue-300 text-lg" href="{% url 'chat' %}">Chat</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-screen-lg mx-auto mb-auto">
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="text-center mt-6 pb-6 h-10">
+      <p class="text-gray-500">
+        Made by Taher Afini
+      </p>
+    </footer>
+  </body>
+</html>
